@@ -38,8 +38,8 @@ jobs:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: var/www/html/
-          local-dir: .next/
+          server-dir: /var/www/html/
+          local-dir: /.next/
 
   start:   
     needs: build  
@@ -47,4 +47,6 @@ jobs:
 
     steps:
       - name: Start Next.js app
-        run: yarn start
+        run: |
+          cd var/www/html  
+          yarn start
