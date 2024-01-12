@@ -35,7 +35,7 @@ jobs:
           server: 45.148.29.177
           username: wang
           password: Ofem2024
-          server-dir: /public_html/
+          server-dir: /var/www/html/
           local-dir: .next/
           port: 22  
       
