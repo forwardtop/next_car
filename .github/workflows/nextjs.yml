@@ -14,37 +14,23 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: docker system prune -a
-        run : docker system prune -a
+
+      - name: Prune Docker images
+        run: docker system prune -a
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20.11.0  
-      - name: Cache Clean
+          node-version: 14  # Adjust the Node.js version as needed
+
+      - name: Clean npm cache
         run: npm cache clean --force
+
       - name: Install dependencies
         run: yarn install
 
       - name: Build
         run: yarn build
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    needs: build  # Ensure the 'build' job is completed before starting this job
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.11.0  # Adjust the Node.js version as needed
-
-      - name: Install dependencies
-        run: yarn install
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -52,25 +38,13 @@ jobs:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /var/www/html/
-          local-dir: "${{ github.workspace }}/.next/"
+          server-dir: /var/www/html
+          local-dir: .next/
 
   start:
+    needs: build  # Ensure the 'deploy' job is completed before starting this job
     runs-on: ubuntu-latest
 
-    needs: deploy  # Ensure the 'deploy' job is completed before starting this job
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.11.0  # Adjust the Node.js version as needed
-
-      - name: Install dependencies
-        run: yarn install
-
       - name: Start Next.js app
         run: yarn start
