@@ -1,0 +1,36 @@
+    {
+        "items": {
+          "bootstrap": [
+            {
+              "id": 1,
+              "title": "Car 1",
+              "body": "Fashion Car Model",
+              "imageUrl": "/assets/car1.webp",
+              "docs": ""
+            },
+            {
+              "id": 2,
+              "title": "Car 2",
+              "body": "Fashion Car Model",
+              "imageUrl": "/assets/car2.png",
+              "docs": ""
+            },
+            {
+              "id": 3,
+              "title": "Car 3",
+              "body": "Fashion Car Model",
+              "imageUrl": "/assets/car1.webp",
+              "docs": ""
+            },
+            {
+              "id": 4,
+              "title": "Car 4",
+              "body": "Fashion Car Model",
+              "imageUrl": "/assets/car2.png",
+              "docs": ""
+            }
+          ]
+        }
+      }
+     
+  
