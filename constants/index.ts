@@ -1,21 +1,35 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "@/public/assets";
 
+// export const navLinks = [
+//     {
+//         id: "qwikio",
+//         title: "We are Qwikio",
+//     },
+//     {
+//         id: "features",
+//         title: "Features",
+//     },
+//     {
+//         id: "product",
+//         title: "Product",
+//     },
+//     {
+//         id: "clients",
+//         title: "Clients",
+//     },
+// ];
 export const navLinks = [
     {
-        id: "home",
-        title: "Home",
+        id: "qwikio",
+        title: "We are Qwikio",
     },
     {
         id: "features",
-        title: "Features",
-    },
-    {
-        id: "product",
-        title: "Product",
+        title: "Models",
     },
     {
         id: "clients",
-        title: "Clients",
+        title: "Bayond the Car",
     },
 ];
 

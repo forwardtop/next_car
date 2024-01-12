@@ -3,30 +3,58 @@
           "bootstrap": [
             {
               "id": 1,
-              "title": "Car 1",
-              "body": "Fashion Car Model",
-              "imageUrl": "/assets/car1.webp",
+              "title": "MetroBus 1",
+              "body": "EV_BUS_AJ_Mat_01",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_01.png",
               "docs": ""
             },
             {
               "id": 2,
-              "title": "Car 2",
-              "body": "Fashion Car Model",
-              "imageUrl": "/assets/car2.png",
+              "title": "MetroBus 2",
+              "body": "EV_BUS_AJ_Mat_02",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_02.png",
               "docs": ""
             },
             {
               "id": 3,
-              "title": "Car 3",
-              "body": "Fashion Car Model",
-              "imageUrl": "/assets/car1.webp",
+              "title": "MetroBus 3",
+              "body": "EV_BUS_AJ_Mat_03",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_03.png",
               "docs": ""
             },
             {
               "id": 4,
-              "title": "Car 4",
-              "body": "Fashion Car Model",
-              "imageUrl": "/assets/car2.png",
+              "title": "MetroBus 4",
+              "body": "EV_BUS_AJ_Mat_04",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_04.png",
+              "docs": ""
+            },
+            {
+              "id": 5,
+              "title": "MetroBus 5",
+              "body": "EV_BUS_AJ_Mat_05",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_05.png",
+              "docs": ""
+            },
+            {
+              "id": 6,
+              "title": "MetroBus 6",
+              "body": "EV_BUS_AJ_Mat_06",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_06.png",
+              "docs": ""
+            },
+            {
+              "id": 7,
+              "title": "MetroBus 7",
+              "body": "EV_BUS_AJ_Mat_07",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_07.png",
+              "docs": ""
+            },
+            {
+              "id": 8,
+              "title": "MetroBus 8",
+              "body": "EV_BUS_AJ_Mat_08",
+              "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_08.png",
               "docs": ""
             }
           ]

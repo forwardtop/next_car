@@ -16,7 +16,7 @@ const items = [
     header: 'Slide 2 Header'
   },
   {
-    src: '/assets/car1.webp',
+    src: '/assets/car3.webp',
     altText: 'Slide 3',
     caption: 'Slide 3',
     header: 'Slide 3 Header'
@@ -25,12 +25,12 @@ const items = [
 
 const HeroImageSlider: React.FC = () => (
   <Carousel
-    showThumbs={false}
+    showThumbs={true}
     showArrows={true}
     autoPlay={true}
     interval={3000}
     infiniteLoop={true}
-    className='w-[1200px]  h-32'
+    className='w-[1200px]'
   >
     {items.map((item, index) => (
       <div key={index}>

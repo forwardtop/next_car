@@ -7,14 +7,14 @@ import Image from 'next/image';
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
-      <Image src={logo} alt="HooBank" width={124} height={32} />
+    <nav className="w-full flex py-6 justify-center items-center navbar">
+      <Image src={logo} alt="qwikio" width={250} height={50} />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}>
-            <a href={`#${nav.id}`}>
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}>
+            <a href={`#${nav.id}`} className='text-white decoration-transparent'>
               {nav.title}
             </a>
           </li>

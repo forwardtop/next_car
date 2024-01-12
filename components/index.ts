@@ -10,7 +10,7 @@ import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import HeroImageSlider from "./HeroImageSlider";
 import BootstrapCarousel from "./BootstrapCarousel";
-
+import HeroVideo from "./HeroVideo";
 export {
     Navbar,
     Billing,
@@ -24,4 +24,5 @@ export {
     Hero,
     HeroImageSlider,
     BootstrapCarousel,
+    HeroVideo
 };

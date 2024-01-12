@@ -22,12 +22,12 @@ const BootstrapCarousel: React.FC = () => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {bootstrap.map((item: BootstrapItem) => (
-        <Carousel.Item key={item.id} className={styles.itemP} interval={4000}>
+        <Carousel.Item key={item.id} className={styles.itemP} interval={3000}>
           <img src={item.imageUrl} alt="slides" />
           <Carousel.Caption className={styles.caption}>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
-            <button className="btn btn-danger">Visit Docs</button>
+            <button className="btn btn-danger">View Details</button>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
