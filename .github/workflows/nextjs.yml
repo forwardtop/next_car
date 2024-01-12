@@ -38,4 +38,6 @@ jobs:
           server-dir: /var/www/html/
           local-dir: .next/
           port: 22  
+        env:
+          DEBUG: 'true'
       
