@@ -48,5 +48,5 @@ jobs:
     steps:
       - name: Start Next.js app
         run: |
-          cd var/www/html  
-          yarn start
+          cd /var/www/html  
+          npm run start
