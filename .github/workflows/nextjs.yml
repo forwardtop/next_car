@@ -35,7 +35,7 @@ jobs:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /var/www/html/
+          server-dir: /
           local-dir: .next/
         env:
           DEBUG: 'true'
