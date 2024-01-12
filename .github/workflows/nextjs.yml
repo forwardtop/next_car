@@ -53,7 +53,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/
-          local-dir: .next/
+          local-dir: "${{ github.workspace }}/.next"
 
   start:
     runs-on: ubuntu-latest
