@@ -42,7 +42,7 @@ jobs:
           local-dir: .next/
 
   start:
-    needs: build  # Ensure the 'deploy' job is completed before starting this job
+    needs: build  
     runs-on: ubuntu-latest
 
     steps:
