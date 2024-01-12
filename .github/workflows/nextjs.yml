@@ -41,7 +41,7 @@ jobs:
           server-dir: /
           local-dir: .next/
 
-  start:
+  start:   
     needs: build  
     runs-on: ubuntu-latest
 
