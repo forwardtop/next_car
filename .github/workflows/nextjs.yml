@@ -37,5 +37,5 @@ jobs:
           password: Ofem2024
           server-dir: /public_html/
           local-dir: .next/
-          port: 22  # Change to 21 for FTP
+          port: 22  
       
