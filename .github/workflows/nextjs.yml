@@ -32,11 +32,11 @@ jobs:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: 45.148.29.177
+          server: sftp://45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/
-          local-dir: /.next/
+          local-dir: .next/
           port: 22  
         env:
           DEBUG: 'true'
