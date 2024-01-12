@@ -41,7 +41,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14  # Adjust the Node.js version as needed
+          node-version: 20  # Adjust the Node.js version as needed
 
       - name: Install dependencies
         run: yarn install
@@ -52,7 +52,7 @@ jobs:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /
+          server-dir: /var/www/html/
           local-dir: .next/
 
   start:
@@ -67,7 +67,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14  # Adjust the Node.js version as needed
+          node-version: 20  # Adjust the Node.js version as needed
 
       - name: Install dependencies
         run: yarn install
