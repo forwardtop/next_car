@@ -32,6 +32,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/react/
           local-dir: .next/
-          port: 22
-          protocol: 'ftps'
+          port: 21
           passive: true
