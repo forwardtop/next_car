@@ -53,8 +53,8 @@ jobs:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /
-          local-dir: "${{ github.workspace }}/.next/"
+          server-dir: /var/www/html/react/
+          local-dir: .next/"
           port: 22
 
   start:
