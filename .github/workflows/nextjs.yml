@@ -40,6 +40,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/react/
           local-dir: .next/
+          port: 22
 
   start:   
     needs: build  
@@ -48,5 +49,5 @@ jobs:
     steps:
       - name: Start Next.js app
         run: |
-          cd /var/www/html/react/
+          cd /var/www/html/react
           npm run start
