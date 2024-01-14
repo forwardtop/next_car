@@ -81,8 +81,9 @@ jobs:
         run: |
           echo "put -r ./.next/*" > sftp_commands
           echo "exit" >> sftp_commands
-          sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22 wang@45.148.29.177:/var/www/html/react/ < sftp_commands
-
-          # Restart your Next.js app on the server if needed
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22 wang@45.148.29.177 'pm2 restart your-nextjs-app'
-          
+  
+          # Use the private key from GitHub secrets
+          ssh-agent bash -c "ssh-add <(echo ${{ secrets.SECURITY_KEY }}); sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22 wang@45.148.29.177:/var/www/html/react/ < sftp_commands"
+  
+      - name: Restart Next.js app with PM2
+        run: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22 wang@45.148.29.177 'pm2 restart your-nextjs-app'
