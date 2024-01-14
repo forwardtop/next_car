@@ -81,7 +81,7 @@ jobs:
         run: |
           echo "put -r ./.next/*" > sftp_commands
           echo "exit" >> sftp_commands
-          sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22 wang@45.148.29.177:/path/to/destination < sftp_commands
+          sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22 wang@45.148.29.177:/var/www/html/react/ < sftp_commands
 
           # Restart your Next.js app on the server if needed
           ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22 wang@45.148.29.177 'pm2 restart your-nextjs-app'
