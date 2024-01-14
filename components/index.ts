@@ -11,6 +11,7 @@ import Hero from "./Hero";
 import HeroImageSlider from "./HeroImageSlider";
 import BootstrapCarousel from "./BootstrapCarousel";
 import HeroVideo from "./HeroVideo";
+import WeAreQwikio from "./WeAreQwikio";
 export {
     Navbar,
     Billing,
@@ -24,5 +25,6 @@ export {
     Hero,
     HeroImageSlider,
     BootstrapCarousel,
-    HeroVideo
+    HeroVideo,
+    WeAreQwikio,
 };

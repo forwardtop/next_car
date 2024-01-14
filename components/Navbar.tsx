@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { close, logo, menu } from "@/public/assets";
 import { navLinks } from "@/constants";
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,9 +16,9 @@ const Navbar: React.FC = () => {
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}>
-            <a href={`#${nav.id}`} className='text-white decoration-transparent'>
+            <Link href={`${nav.link}`} className='text-white decoration-transparent'>
               {nav.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

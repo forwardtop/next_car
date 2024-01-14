@@ -3,8 +3,15 @@
           "bootstrap": [
             {
               "id": 1,
-              "title": "MetroBus 1",
-              "body": "EV_BUS_AJ_Mat_01",
+              "title": "MetroBus 0",
+              "body": "EV_BUS_AJ_Mat_00",
+              "imageUrl": "/assets/metrobus/backgrounds.png",
+              "docs": ""
+            },
+            {
+              "id": 9,
+              "title": "MetroBus 9",
+              "body": "EV_BUS_AJ_Mat_09",
               "imageUrl": "/assets/metrobus/EV_BUS_AJ_Mat_01.png",
               "docs": ""
             },

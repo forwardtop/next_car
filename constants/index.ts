@@ -1,5 +1,5 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "@/public/assets";
-
+import { FaPhone, FaEnvelope } from "react-icons/fa"
 // export const navLinks = [
 //     {
 //         id: "qwikio",
@@ -18,10 +18,16 @@ import { people01, people02, people03, facebook, instagram, linkedin, twitter, a
 //         title: "Clients",
 //     },
 // ];
+interface ContactInfo {
+    id: string;
+    icon: React.ElementType; // Use React.ElementType here
+    link: string;
+}
 export const navLinks = [
     {
         id: "qwikio",
         title: "We are Qwikio",
+        link: "/who-we-are"
     },
     {
         id: "features",
@@ -210,5 +216,18 @@ export const clients = [
     {
         id: "client-4",
         logo: dropbox,
+    },
+];
+
+export const contactInfo: ContactInfo[] = [
+    {
+        id: "contact-info-1",
+        icon: FaEnvelope,
+        link: "mailto:info@qwikio.com",
+    },
+    {
+        id: "contact-info-2",
+        icon: FaPhone,
+        link: "tel:+17735303799",
     },
 ];
