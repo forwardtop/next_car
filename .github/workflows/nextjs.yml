@@ -14,18 +14,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Prune Docker images
-        run: docker system prune -a
+      - name: docker system prune -a
+        run : docker system prune -a
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20.11.0  
-
-      - name: Clean npm cache
+          node-version: 18  
+      - name: Cache Clean
         run: npm cache clean --force
-
       - name: Install dependencies
         run: yarn install
 
@@ -38,16 +35,7 @@ jobs:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /var/www/html/react/
+          server-dir: /
           local-dir: .next/
-          port: 22
-
-  start:   
-    needs: build  
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Start Next.js app
-        run: |
-          cd /var/www/html/react
-          npm run start
+        env:
+          DEBUG: 'true'
