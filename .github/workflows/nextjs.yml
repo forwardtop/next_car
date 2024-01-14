@@ -83,7 +83,7 @@ jobs:
           echo "exit" >> sftp_commands
   
           # Use the private key from GitHub secrets
-          ssh-agent bash -c "ssh-add <(echo ${{ secrets.SECURITY_KEY }}); sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22 wang@45.148.29.177:/var/www/html/react/ < sftp_commands"
+          ssh-agent bash -c "ssh-add <(echo ${{ secrets.SSH_PRIVATE_KEY }}); sftp -o StrictHostKeyChecking=no -P 22 wang@45.148.29.177:/var/www/html/react/ < sftp_commands"
   
       - name: Restart Next.js app with PM2
-        run: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22 wang@45.148.29.177 'pm2 restart your-nextjs-app'
+        run: ssh -o StrictHostKeyChecking=no -p 22 wang@45.148.29.177 'pm2 restart your-nextjs-app'
