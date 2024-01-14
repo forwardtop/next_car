@@ -1,78 +1,34 @@
-
-name: Deploy website on push
+name: Deploy to Webdock
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: docker system prune -a
-        run : docker system prune -a
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20.11.0  
-      - name: Cache Clean
-        run: npm cache clean --force
+          node-version: 20
+
       - name: Install dependencies
         run: yarn install
 
       - name: Build
         run: yarn build
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    needs: build  # Ensure the 'build' job is completed before starting this job
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.11.0  # Adjust the Node.js version as needed
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Sync files
+      - name: Deploy to Webdock
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: 45.148.29.177
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/react/
-          local-dir: "${{ github.workspace }}/.next/"
-          port: 22
-
-  start:
-    runs-on: ubuntu-latest
-
-    needs: deploy  # Ensure the 'deploy' job is completed before starting this job
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.11.0  # Adjust the Node.js version as needed
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Start Next.js app
-        run: yarn start
+          local-dir: .next/
