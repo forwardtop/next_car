@@ -1,89 +1,52 @@
-# name: Deploy website on push
-
-# on:
-#   push:
-#     branches: [main]
-#   pull_request:
-#     branches: [main]
-#   workflow_dispatch:
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
-#       - name: Prune Docker images
-#         run: docker system prune -a
-
-#       - name: Set up Node.js
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: 20.11.0  
-
-#       - name: Clean npm cache
-#         run: npm cache clean --force
-
-#       - name: Install dependencies
-#         run: yarn install
-
-#       - name: Build
-#         run: yarn build
-
-#       - name: Sync files
-#         uses: SamKirkland/FTP-Deploy-Action@4.1.0
-#         with:
-#           server: 45.148.29.177
-#           username: ${{ secrets.USERNAME }}
-#           password: ${{ secrets.PASSWORD }}
-#           server-dir: /html/
-#           local-dir: .next/
-
-#   start:   
-#     needs: build  
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Start Next.js app
-#         run: |
-#           cd /var/www/html  
-#           npm run start
-
-name: Deploy to Webdock
+name: Deploy website on push
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Prune Docker images
+        run: docker system prune -a
+
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: 20
+          node-version: 20.11.0  
+
+      - name: Clean npm cache
+        run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build
-        run: npm run build
+        run: yarn build
 
-      - name: Deploy to Webdock
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: 45.148.29.177
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          server-dir: /var/www/html/react/
+          local-dir: .next/
+
+  start:   
+    needs: build  
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Next.js app
         run: |
-          echo "put -r ./.next/*" > sftp_commands
-          echo "exit" >> sftp_commands
-  
-          # Use the private key from GitHub secrets
-          ssh-agent bash -c "ssh-add <(echo ${{ secrets.SSH_PRIVATE_KEY }}); sftp -o StrictHostKeyChecking=no -P 22 wang@45.148.29.177:/var/www/html/react/ < sftp_commands"
-  
-      - name: Restart Next.js app with PM2
-        run: ssh -o StrictHostKeyChecking=no -p 22 wang@45.148.29.177 'pm2 restart your-nextjs-app'
+          cd /var/www/html/react/
+          npm run start
