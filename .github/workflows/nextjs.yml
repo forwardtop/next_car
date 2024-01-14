@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /
-          local-dir: .next/
+          local-dir: /
   start:
           runs-on: ubuntu-latest
       
@@ -48,4 +48,4 @@ jobs:
               run: yarn install
       
             - name: Start Next.js app
-              run: yarn start
+              run: yarn dev
