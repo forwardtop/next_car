@@ -2,12 +2,12 @@
 import styles from "@/styles/style";
 import {
   Navbar,
-  Hero,
-  Stats,
-  Business,
-  Billing,
-  CardDeal,
-  CTA,
+  // Hero,
+  // Stats,
+  // Business,
+  // Billing,
+  // CardDeal,
+  // CTA,
   Footer,
   HeroImageSlider,
   BootstrapCarousel,
@@ -42,12 +42,12 @@ const Home: React.FC = () => {
         </div>
         <div className={`bg-gray-500 ${styles.paddingX} ${styles.flexStart} mt-5`}>
           <div className={`${styles.boxWidth}`}>
-            <Hero />
+            {/* <Hero />
             <Stats />
             <Business />
             <Billing />
             <CardDeal />
-            <CTA />
+            <CTA /> */}
             <Footer />
           </div>
         </div>
