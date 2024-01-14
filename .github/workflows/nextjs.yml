@@ -54,7 +54,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/react/
-          local-dir: /.next/
+          local-dir: .next/
           port: 22
 
   start:
