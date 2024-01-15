@@ -34,23 +34,23 @@ const ImageGallery: React.FC = () => {
     ];
   
     return (
-      <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+      <div className="mx-auto">
         <div className="-m-1 flex flex-wrap md:-m-2">
-          <div className="flex w-2/3">
+          <div className="flex flex-col w-full lg:w-2/3">
             {images.slice(0, 2).map((image, index) => (
               <div key={index} className={`w-${index === 0 ? 'full' : '1/2'} p-1 md:p-2`}>
                 <a href={image.link}>
                   <img
                     alt={image.alt}
-                    className="block h-full w-full rounded-lg object-cover object-center"
+                    className="block rounded-lg object-cover object-center"
                     src={image.src}
                   />
                 </a>
               </div>
             ))}
           </div>
-          <div className="flex w-1/3 flex-wrap">
-            {images.slice(2, 4).map((image, index) => (
+          <div className="flex w-full lg:w-1/3 flex-wrap">
+            {images.slice(3, 4).map((image, index) => (
               <div key={index} className="w-full p-1 md:p-2">
                 <a href={image.link}>
                   <img
@@ -62,7 +62,7 @@ const ImageGallery: React.FC = () => {
               </div>
             ))}
             {images.slice(4).map((image, index) => (
-              <div key={index} className={`w-${index === 4 ? 'full' : '1/2'} p-1 md:p-2`}>
+              <div key={index} className={`w-${index === 3 ? 'full' : '1/2'} p-1 md:p-2`}>
                 <a href={image.link}>
                   <img
                     alt={image.alt}

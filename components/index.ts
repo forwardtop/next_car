@@ -12,6 +12,8 @@ import HeroImageSlider from "./HeroImageSlider";
 import BootstrapCarousel from "./BootstrapCarousel";
 import HeroVideo from "./HeroVideo";
 import WeAreQwikio from "./WeAreQwikio";
+import ImageGallery from "@/components/ImageGallery";
+import QwikioPower from "@components/QwikioPower";
 export {
     Navbar,
     Billing,
@@ -27,4 +29,6 @@ export {
     BootstrapCarousel,
     HeroVideo,
     WeAreQwikio,
+    ImageGallery,
+    QwikioPower
 };

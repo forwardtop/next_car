@@ -1,51 +1,63 @@
-"use client"
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import { close, logo, menu } from "@/public/assets";
 import { navLinks } from "@/constants";
-import Image from 'next/image';
-import Link from 'next/link';
-
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="w-full flex py-6 justify-center items-center navbar">
-      <Image src={logo} alt="qwikio" width={250} height={50} />
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <Link href="/">
+        <Image src={logo} alt="qwikio" width={250} height={50} />
+      </Link>
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 mr-12">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}>
-            <Link href={`${nav.link}`} className='text-white decoration-transparent'>
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+              index === navLinks.length - 1 ? "mr-0" : "mr-10"
+            }`}
+          >
+            <Link
+              href={`${nav.link}`}
+              className="text-white decoration-transparent"
+            >
               {nav.title}
             </Link>
           </li>
         ))}
       </ul>
       <div className="sm:hidden flex flex-1 justify-end items-center">
-        <Image src={toggle ? close : menu}
+        <Image
+          src={toggle ? close : menu}
           alt="menu"
           className="object-contain"
           width={28}
           height={28}
-          onClick={() => setToggle((prev) => !prev)} />
-        <div className={`${toggle ? 'flex' : 'hidden'}
-            p-6 bg-black-gradient absolute top-20 ring-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
+          onClick={() => setToggle((prev) => !prev)}
+        />
+        <div
+          className={`${toggle ? "flex" : "hidden"}
+            p-6 bg-black-gradient absolute top-20 ring-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+        >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'}`}>
-                <a href={`#${nav.id}`}>
-                  {nav.title}
-                </a>
+                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                  index === navLinks.length - 1 ? "mr-0" : "mb-4"
+                }`}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
