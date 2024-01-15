@@ -14,6 +14,7 @@ import {
   BootstrapCarousel,
   HeroVideo,
 } from "@/components";
+import ImageGallery from "@/components/ImageGallery";
 const Home: React.FC = () => {
   return (
     <>
@@ -38,8 +39,11 @@ const Home: React.FC = () => {
             <HeroVideo />
           </div>
           <div className="bg-gray-100">
-            <h2 className="text-center text-4xl">Discover the world of QWIKIO</h2>
+            <h2 className="text-center mb-5 text-4xl">Discover the world of QWIKIO</h2>
+          <ImageGallery />
           </div>
+          
+
         </div>
         <div className={`bg-gray-500 ${styles.paddingX} ${styles.flexStart} mt-5`}>
           <div className={`${styles.boxWidth}`}>
