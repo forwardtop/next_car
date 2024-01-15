@@ -30,7 +30,7 @@ jobs:
           server: 159.203.151.63
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /
+          server-dir: /.next/
           local-dir: .next/
       # start:
       #   runs-on: ubuntu-latest
