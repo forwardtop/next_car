@@ -32,3 +32,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           server-dir: /
           local-dir: .next/
+          port: 22
