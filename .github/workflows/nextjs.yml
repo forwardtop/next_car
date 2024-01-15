@@ -30,22 +30,5 @@ jobs:
           server: 159.203.151.63
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /.next/
+          server-dir: /var/www/html/react/
           local-dir: .next/
-      # start:
-      #   runs-on: ubuntu-latest
-    
-      #   steps:
-      #     - name: Checkout code
-      #       uses: actions/checkout@v2
-    
-      #     - name: Set up Node.js
-      #       uses: actions/setup-node@v2
-      #       with:
-      #         node-version: 20
-    
-      #     - name: Install dependencies
-      #       run: yarn install
-    
-      #     - name: Start Next.js app
-      #       run: yarn dev
