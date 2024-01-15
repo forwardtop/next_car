@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # - name: Set up Node.js
       #   uses: actions/setup-node@v2
@@ -25,11 +25,12 @@ jobs:
       #   run: yarn build
 
       - name: Deploy to Webdock
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: 159.203.151.63
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /
           local-dir: /
-          port: 22
+          port: 21
+          passive: true
