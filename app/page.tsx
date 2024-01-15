@@ -1,5 +1,6 @@
 "use client";
 import styles from "@/styles/style";
+import "@/styles/globals.css";
 import {
   Navbar,
   // Hero,
@@ -25,12 +26,12 @@ const Home: React.FC = () => {
             <BootstrapCarousel />
           </div>
           <div className="text-center mt-8 mb-5">
-            <h1>Explore all the QWIKIO models</h1>
+            <h1 className="mb-4 animate-fade-up animate-duration-1000 animate-delay-500">Explore all the QWIKIO models</h1>
           </div>
           <div className="flex justify-center">
             <HeroImageSlider />
           </div>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-4 animate-fade-up animate-once animate-ease-linear">
               <button className="text-xl border-solid border-1 border-gray-900 p-1 w-48 rounded-sm hover:bg-black duration-500 hover:text-white">Explore More</button>
           </div>
           <div>
