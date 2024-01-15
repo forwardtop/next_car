@@ -1,6 +1,6 @@
-import styles from "@/styles/style";
-import { logo } from "@/public/assets";
-import { footerLinks, socialMedia, contactInfo } from "@/constants";
+import styles from "styles/style";
+import { logo } from "public/assets";
+import { footerLinks, socialMedia, contactInfo } from "../constants";
 import Image from "next/image";
 import { FaEnvelope } from "react-icons/fa";
 

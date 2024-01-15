@@ -1,6 +1,6 @@
 // pages/who-we-are.tsx
-import { Navbar, WeAreQwikio } from "@/components";
-import "@/styles/globals.css";
+import { Navbar, WeAreQwikio } from "../components";
+import "styles/globals.css";
 
 const WhoWeAre: React.FC = () => {
   return (

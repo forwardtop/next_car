@@ -1,6 +1,6 @@
 "use client";
-import styles from "@/styles/style";
-import "@/styles/globals.css";
+import styles from "styles/style";
+import "styles/globals.css";
 import {
   Navbar,
   // Hero,
@@ -15,7 +15,7 @@ import {
   HeroVideo,
   ImageGallery,
   QwikioPower,
-} from "@/components";
+} from "components";
 
 const Home: React.FC = () => {
   return (

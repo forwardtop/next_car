@@ -32,5 +32,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           server-dir: /
           local-dir: /
-          port: 21
-          passive: true
+          port: 22

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { close, logo, menu } from "@/public/assets";
-import { navLinks } from "@/constants";
+import { close, logo, menu } from "public/assets";
+import { navLinks } from "../constants";
 import Image from "next/image";
 import Link from "next/link";
 

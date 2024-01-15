@@ -1,33 +1,35 @@
 // components/Gallery.tsx
+import { front1, front2, front3, front4, front5, front6 } from "public/assets";
+
 const ImageGallery: React.FC = () => {
     const images = [
       {
-        src: "/assets/car/1 front.png",
+        src: front1,
         alt: "Image 1",
         link: "/link1",
       },
       {
-        src: "/assets/car/2 front.png",
+        src: front2,
         alt: "Image 2",
         link: "/link2",
       },
       {
-        src: "/assets/car/3 front.png",
+        src: front3,
         alt: "Image 3",
         link: "/link3",
       },
       {
-        src: "/assets/car/4 front.png",
+        src: front4,
         alt: "Image 4",
         link: "/link4",
       },
       {
-        src: "/assets/car/5 front.png",
+        src: front5,
         alt: "Image 5",
         link: "/link5",
       },
       {
-        src: "/assets/car/6 front.png",
+        src: front6,
         alt: "Image 6",
         link: "/link6",
       },
@@ -43,7 +45,7 @@ const ImageGallery: React.FC = () => {
                   <img
                     alt={image.alt}
                     className="block rounded-lg object-cover object-center"
-                    src={image.src}
+                    src={image.src.src}
                   />
                 </a>
               </div>
@@ -56,7 +58,7 @@ const ImageGallery: React.FC = () => {
                   <img
                     alt={image.alt}
                     className="block h-full w-full rounded-lg object-cover object-center"
-                    src={image.src}
+                    src={image.src.src}
                   />
                 </a>
               </div>
@@ -67,7 +69,7 @@ const ImageGallery: React.FC = () => {
                   <img
                     alt={image.alt}
                     className="block h-full w-full rounded-lg object-cover object-center"
-                    src={image.src}
+                    src={image.src.src}
                   />
                 </a>
               </div>
