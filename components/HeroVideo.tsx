@@ -13,20 +13,18 @@ const HeroVideo: React.FC = () => {
           setFontSize(newFontSize);
         }
       };
-  
       if (typeof window !== 'undefined') {
         window.addEventListener('scroll', handleScroll);
       }
 
     }, [setFontSize]);
-    console.log(fontSize);
 
   return (
     <section className="bg-gray-100">
       <div className="flex justify-center mt-8">
         <video autoPlay loop muted className="mt-20">
           {/* Replace 'your-video-source.mp4' with the actual video source */}
-          <source src="/assets/section3.mp4" type="video/mp4" />
+          <source src={"/assets/herovideo.mp4"} type="video/mp4" />
         </video>
         <div className="overlay flex flex-col">
             <h2 className="text-white font-bold" style={{ fontSize: `${fontSize}px`, transition: 'font-size 0.3s ease' }}>Blue Sky Coming</h2>

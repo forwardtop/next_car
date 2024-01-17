@@ -29,6 +29,18 @@ import front3 from "./car/front3.png";
 import front4 from "./car/front4.png";
 import front5 from "./car/front5.png";
 import front6 from "./car/front6.png";
+import bus1 from "./metrobus/bus1.png";
+import bus2 from "./metrobus/bus2.png";
+import bus3 from "./metrobus/bus3.png";
+import bus4 from "./metrobus/bus4.png";
+import bus5 from "./metrobus/bus5.png";
+import bus6 from "./metrobus/bus6.png";
+import bus7 from "./metrobus/bus7.png";
+import bus8 from "./metrobus/bus8.png";
+import bus9 from "./metrobus/bus9.png";
+import red1 from "./car/red1.png";
+import background from "./metrobus/background.png";
+import herovideo from "./herovideo.mp4";
 
 export {
   airbnb,
@@ -62,4 +74,16 @@ export {
   front4,
   front5,
   front6,
+  bus1,
+  bus2,
+  bus3,
+  bus4,
+  bus5,
+  bus6,
+  bus7,
+  bus8,
+  bus9,
+  background,
+  red1,
+  herovideo,
 };
