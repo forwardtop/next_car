@@ -30,14 +30,7 @@ export const navLinks = [
         title: "We are Qwikio",
         link: "/who-we-are"
     },
-    {
-        id: "features",
-        title: "Models",
-    },
-    {
-        id: "clients",
-        title: "Bayond the Car",
-    },
+    
 ];
 
 export const features = [
