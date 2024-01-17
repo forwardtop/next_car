@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { close, logo, menu } from "public/assets";
 import { navLinks } from "../constants";
 import Image from "next/image";
@@ -7,8 +7,32 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Add an event listener to check for scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Adjust the scroll position value based on your needs
+      setIsSticky(scrollPosition > 100);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="w-full flex py-6 justify-center items-center navbar">
+    <nav
+      className={`w-full flex py-6 justify-center items-center navbar transition-all duration-300 ease-in-out ${
+        isSticky
+          ? "fixed top-0 bg-white !text-gray-500 h-12 shadow-md"
+          : "h-20 bg-transparent"
+      }`}
+    >
       <Link href="/">
         <Image src={logo} alt="qwikio" width={200} height={80} />
       </Link>

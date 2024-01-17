@@ -1,6 +1,7 @@
 // components/WeAreQwikio.tsx
 import { motion } from "framer-motion";
 import HeroSection from "./HeroSection";
+import Footer from "./Footer";
 
 const WeAreQwikio: React.FC = () => {
   const fadeInUp = {
@@ -33,7 +34,7 @@ const WeAreQwikio: React.FC = () => {
             <div className="flex justify-center mt-24">
               <img className="w-3/4" src="assets/images/logo.png" alt="Logo" />
             </div>
-            <p className="mt-12 text-xl text-gray-500 text-center">
+            <p className="mt-12 text-3xl text-gray-500 text-center leading-relaxed">
               Our vision extends to creating a connected, sustainable world. Our
               initiatives include integrating EVs with smart mini-grid systems
               and offering energy solutions like Home Powerplus and the Solar
@@ -42,34 +43,48 @@ const WeAreQwikio: React.FC = () => {
             </p>
           </div>
         </div>
-
-        <h2 className="text-2xl font-bold mb-4">
-          Q-KERS Technology: Powering the Future
-        </h2>
-        <p className="mb-6">
-          Our proprietary Q-KERS technology is a game-changer in the EV space.
-          It's not just about driving; it's about generating power on the go.
-          This innovation ensures that our vehicles go the distance, redefining
-          what you expect from electric mobility.
-        </p>
+        <div className=" flex justify-center items-center">
+          <div className="mt-12 w-2/3 flex flex-col">
+            <h2 className="text-6xl font-bold mb-4 text-center text-gray-500">
+              Q-KERS Technology: Powering the Future
+            </h2>
+            <p className="mb-6 text-center text-gray-500 text-3xl leading-relaxed">
+              Our proprietary Q-KERS technology is a game-changer in the EV
+              space. It's not just about driving; it's about generating power on
+              the go. This innovation ensures that our vehicles go the distance,
+              redefining what you expect from electric mobility.
+            </p>
+          </div>
+        </div>
 
         {/* Add styling for other sections similarly */}
         {/* ... */}
+        <div className=" flex justify-center items-center ">
+          <div className="mt-12 w-2/3 flex flex-col text-center justify-center items-center">
+            <h2 className="text-6xl text-gray-500 font-bold mb-4">Get in Touch</h2>
+            <p className="mb-4 text-4xl text-gray-500 w-1/2">
+              Discover more about our technology and our vision for sustainable
+              mobility. Reach out to us at:
+            </p>
+            <ul className="mb-4 text-3xl text-gray-500">
+              <li>Email: info@qwikio.com</li>
+              <li>Phone: +1 773-530-3799</li>
+            </ul>
 
-        <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-        <p className="mb-4">
-          Discover more about our technology and our vision for sustainable
-          mobility. Reach out to us at:
-        </p>
-        <ul className="mb-4">
-          <li>Email: info@qwikio.com</li>
-          <li>Phone: +1 773-530-3799</li>
-        </ul>
+            <p className="text-3xl text-gray-500">
+              Join us in shaping the future of transportation. Explore Qwikio
+              Inc. - where innovation meets sustainability.
+            </p>
+          </div>
+        </div>
+        <div className="bg-gray-500 sm:px-16 px-6 flex justify-center items-start mt-5">
+          <div className="xl:max-w-[1280px] w-full">
+          <Footer />
 
-        <p>
-          Join us in shaping the future of transportation. Explore Qwikio Inc. -
-          where innovation meets sustainability.
-        </p>
+          </div>
+
+
+        </div>
       </motion.div>
     </>
   );

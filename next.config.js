@@ -4,9 +4,6 @@ const nextConfig = {}
 module.exports = nextConfig
 
 module.exports = {
-  experimental: {
-    parallel: true,
-  },
     webpack: (config) => {
       config.module.rules.push({
         test: /\.(mp4|webm)$/,
