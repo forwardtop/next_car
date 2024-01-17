@@ -22,12 +22,12 @@ const Footer: React.FC = () => (
           {contactInfo.map((info) => (
             <li
               key={info.id}
-              className="text-white text-xl flex items-center space-x-2"
+              className="text-white text-xl flex items-center space-x-2 p-2"
             >
               <i className="material-icons-outlined text-xl">
                 <info.icon />
               </i>
-              <a className="text-white" href={info.link}>{info.title}</a>
+              <a className="text-white text-decoration-none" href={info.link}>{info.title}</a>
             </li>
           ))}
         </ul>
