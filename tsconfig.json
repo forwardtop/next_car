@@ -22,7 +22,13 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      // "@images/*": [
+      //   "./public/assets/images/*"
+      // ],
+      // "@videos/*": [
+      //   "./public/assets/videos/*"
+      // ],
     },
     "types": [
       "react-responsive-carousel"

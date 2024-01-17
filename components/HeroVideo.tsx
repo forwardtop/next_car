@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from 'react';
-
+import { hero } from "public/assets";
 const HeroVideo: React.FC = () => {
     const [fontSize, setFontSize] = useState(16);
-
+console.log(hero)
     useEffect(() => {
       const handleScroll = () => {
         if (typeof window !== 'undefined') {
@@ -24,7 +24,7 @@ const HeroVideo: React.FC = () => {
       <div className="flex justify-center mt-8">
         <video autoPlay loop muted className="mt-20">
           {/* Replace 'your-video-source.mp4' with the actual video source */}
-          <source src={"/assets/herovideo.mp4"} type="video/mp4" />
+          <source src={hero} type="video/mp4" />
         </video>
         <div className="overlay flex flex-col">
             <h2 className="text-white font-bold" style={{ fontSize: `${fontSize}px`, transition: 'font-size 0.3s ease' }}>Blue Sky Coming</h2>

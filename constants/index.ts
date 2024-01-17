@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "public/assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, coinbase, dropbox, send, shield, star } from "public/assets";
 import { FaPhone, FaEnvelope } from "react-icons/fa"
 // export const navLinks = [
 //     {
@@ -195,14 +195,14 @@ export const socialMedia = [
 ];
 
 export const clients = [
-    {
-        id: "client-1",
-        logo: airbnb,
-    },
-    {
-        id: "client-2",
-        logo: binance,
-    },
+    // {
+    //     id: "client-1",
+    //     logo: airbnb,
+    // },
+    // {
+    //     id: "client-2",
+    //     logo: binance,
+    // },
     {
         id: "client-3",
         logo: coinbase,

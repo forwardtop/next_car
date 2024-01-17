@@ -8,13 +8,13 @@ import { FaEnvelope } from "react-icons/fa";
 const Footer: React.FC = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexCenter} md:flex-row flex-col mb-8 w-full`}>
-      <div className="flex-1 flex flex-col justify-start mr-10">
+      <div className="flex-1 flex flex-row justify-between align-middle mr-10">
         <Image
           src={logo}
           alt="qwikio"
           className="w-[266px] h-[72px] object-contain"
         />
-        <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>
+        <p className={`${styles.paragraph} max-w-[310px]`}>
           Discover more about our technology and our vision for sustainable
           mobility. Reach out to us at:
         </p>

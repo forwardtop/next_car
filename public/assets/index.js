@@ -1,52 +1,44 @@
-import airbnb from "./airbnb.png";
-import bill from "./bill.png";
-import binance from "./binance.png";
-import card from "./card.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
-import logo from "./logo.png";
-import quotes from "./quotes.svg";
-import robot from "./robot.png";
-import send from "./Send.svg";
-import shield from "./Shield.svg";
-import star from "./Star.svg";
-import menu from "./menu.svg";
-import close from "./close.svg";
-import google from "./google.svg";
-import apple from "./apple.svg";
-import arrowUp from "./arrow-up.svg";
-import discount from "./Discount.svg";
-import facebook from "./facebook.svg";
-import instagram from "./instagram.svg";
-import linkedin from "./linkedin.svg";
-import twitter from "./twitter.svg";
-import people01 from "./people01.png";
-import people02 from "./people02.png";
-import people03 from "./people03.png";
-import front1 from "./car/front1.png";
-import front2 from "./car/front2.png";
-import front3 from "./car/front3.png";
-import front4 from "./car/front4.png";
-import front5 from "./car/front5.png";
-import front6 from "./car/front6.png";
-import bus1 from "./metrobus/bus1.png";
-import bus2 from "./metrobus/bus2.png";
-import bus3 from "./metrobus/bus3.png";
-import bus4 from "./metrobus/bus4.png";
-import bus5 from "./metrobus/bus5.png";
-import bus6 from "./metrobus/bus6.png";
-import bus7 from "./metrobus/bus7.png";
-import bus8 from "./metrobus/bus8.png";
-import bus9 from "./metrobus/bus9.png";
-import red1 from "./car/red1.png";
-import background from "./metrobus/background.png";
-import herovideo from "./herovideo.mp4";
+import coinbase from "./images/coinbase.png";
+import dropbox from "./images/dropbox.png";
+import logo from "./images/logo.png";
+import quotes from "./images/quotes.svg";
+import robot from "./images/robot.png";
+import send from "./images/Send.svg";
+import shield from "./images/Shield.svg";
+import star from "./images/Star.svg";
+import menu from "./images/menu.svg";
+import close from "./images/close.svg";
+import google from "./images/google.svg";
+import apple from "./images/apple.svg";
+import arrowUp from "./images/arrow-up.svg";
+import discount from "./images/Discount.svg";
+import facebook from "./images/facebook.svg";
+import instagram from "./images/instagram.svg";
+import linkedin from "./images/linkedin.svg";
+import twitter from "./images/twitter.svg";
+import people01 from "./images/people01.png";
+import people02 from "./images/people02.png";
+import people03 from "./images/people03.png";
+import front1 from "./images/car/front1.png";
+import front2 from "./images/car/front2.png";
+import front3 from "./images/car/front3.png";
+import front4 from "./images/car/front4.png";
+import front5 from "./images/car/front5.png";
+import front6 from "./images/car/front6.png";
+import bus1 from "./images/metrobus/bus1.png";
+import bus2 from "./images/metrobus/bus2.png";
+import bus3 from "./images/metrobus/bus3.png";
+import bus4 from "./images/metrobus/bus4.png";
+import bus5 from "./images/metrobus/bus5.png";
+import bus6 from "./images/metrobus/bus6.png";
+import bus7 from "./images/metrobus/bus7.png";
+import bus8 from "./images/metrobus/bus8.png";
+import bus9 from "./images/metrobus/bus9.png";
+import red1 from "./images/car/red1.png";
+import background from "./images/metrobus/background.png";
+import hero from "./videos/hero.mp4";
 
 export {
-  airbnb,
-  bill,
-  binance,
-  card,
   coinbase,
   dropbox,
   logo,
@@ -85,5 +77,5 @@ export {
   bus9,
   background,
   red1,
-  herovideo,
+  hero,
 };
