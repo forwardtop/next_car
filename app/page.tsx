@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           </div>
           <div className="text-center mt-8 mb-5">
             <h1 className="mb-4 animate-fade-up animate-duration-1000 animate-delay-500">
-              Explore all the QWIKIO models
+              Forward thinking Design and Technology
             </h1>
           </div>
           <div className="flex justify-center">
