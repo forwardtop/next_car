@@ -24,12 +24,12 @@ jobs:
       # - name: Build
       #   run: yarn build
 
-      - name: Deploy to Webdock
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: 159.203.151.63
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          server-dir: /
-          local-dir: /
-          port: 22
+      # - name: Deploy to Webdock
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      #   with:
+      #     server: 159.203.151.63
+      #     username: ${{ secrets.USERNAME }}
+      #     password: ${{ secrets.PASSWORD }}
+      #     server-dir: /
+      #     local-dir: /
+      #     port: 22

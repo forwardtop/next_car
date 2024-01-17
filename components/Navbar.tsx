@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="w-full flex py-6 justify-center items-center navbar">
       <Link href="/">
-        <Image src={logo} alt="qwikio" width={250} height={50} />
+        <Image src={logo} alt="qwikio" width={200} height={80} />
       </Link>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 mr-12">
         {navLinks.map((nav, index) => (
