@@ -22,6 +22,7 @@ interface ContactInfo {
     id: string;
     icon: React.ElementType; // Use React.ElementType here
     link: string;
+    title: string;
 }
 export const navLinks = [
     {
@@ -109,72 +110,72 @@ export const stats = [
 ];
 
 export const footerLinks = [
-    {
-        id: "footerLinks-1",
-        title: "Useful Links",
-        links: [
-            {
-                name: "Content",
-                link: "https://www.qwikio.com/content/",
-            },
-            {
-                name: "How it Works",
-                link: "https://www.qwikio.com/how-it-works/",
-            },
-            {
-                name: "Create",
-                link: "https://www.qwikio.com/create/",
-            },
-            {
-                name: "Explore",
-                link: "https://www.qwikio.com/explore/",
-            },
-            {
-                name: "Terms & Services",
-                link: "https://www.qwikio.com/terms-and-services/",
-            },
-        ],
-    },
-    {
-        id: "footerLinks-2",
-        title: "Community",
-        links: [
-            {
-                name: "Help Center",
-                link: "https://www.qwikio.com/help-center/",
-            },
-            {
-                name: "Partners",
-                link: "https://www.qwikio.com/partners/",
-            },
-            {
-                name: "Suggestions",
-                link: "https://www.qwikio.com/suggestions/",
-            },
-            {
-                name: "Blog",
-                link: "https://www.qwikio.com/blog/",
-            },
-            {
-                name: "Newsletters",
-                link: "https://www.qwikio.com/newsletters/",
-            },
-        ],
-    },
-    {
-        id: "footerLinks-3",
-        title: "Partner",
-        links: [
-            {
-                name: "Our Partner",
-                link: "https://www.qwikio.com/our-partner/",
-            },
-            {
-                name: "Become a Partner",
-                link: "https://www.qwikio.com/become-a-partner/",
-            },
-        ],
-    },
+    // {
+    //     id: "footerLinks-1",
+    //     title: "Useful Links",
+    //     links: [
+    //         {
+    //             name: "Content",
+    //             link: "https://www.qwikio.com/content/",
+    //         },
+    //         {
+    //             name: "How it Works",
+    //             link: "https://www.qwikio.com/how-it-works/",
+    //         },
+    //         {
+    //             name: "Create",
+    //             link: "https://www.qwikio.com/create/",
+    //         },
+    //         {
+    //             name: "Explore",
+    //             link: "https://www.qwikio.com/explore/",
+    //         },
+    //         {
+    //             name: "Terms & Services",
+    //             link: "https://www.qwikio.com/terms-and-services/",
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: "footerLinks-2",
+    //     title: "Community",
+    //     links: [
+    //         {
+    //             name: "Help Center",
+    //             link: "https://www.qwikio.com/help-center/",
+    //         },
+    //         {
+    //             name: "Partners",
+    //             link: "https://www.qwikio.com/partners/",
+    //         },
+    //         {
+    //             name: "Suggestions",
+    //             link: "https://www.qwikio.com/suggestions/",
+    //         },
+    //         {
+    //             name: "Blog",
+    //             link: "https://www.qwikio.com/blog/",
+    //         },
+    //         {
+    //             name: "Newsletters",
+    //             link: "https://www.qwikio.com/newsletters/",
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: "footerLinks-3",
+    //     title: "Partner",
+    //     links: [
+    //         {
+    //             name: "Our Partner",
+    //             link: "https://www.qwikio.com/our-partner/",
+    //         },
+    //         {
+    //             name: "Become a Partner",
+    //             link: "https://www.qwikio.com/become-a-partner/",
+    //         },
+    //     ],
+    // },
 ];
 
 export const socialMedia = [
@@ -222,11 +223,13 @@ export const clients = [
 export const contactInfo: ContactInfo[] = [
     {
         id: "contact-info-1",
+        title: "info@qwikio.com",
         icon: FaEnvelope,
         link: "mailto:info@qwikio.com",
     },
     {
         id: "contact-info-2",
+        title: '+17735303799',
         icon: FaPhone,
         link: "tel:+17735303799",
     },
