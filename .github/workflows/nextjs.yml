@@ -30,6 +30,6 @@ jobs:
           server: 45.153.48.221
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          server-dir: /
+          server-dir: /var/www/html/
           local-dir: /
           port: 22
