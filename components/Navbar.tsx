@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
   }, []);
   return (
     <nav
-      className={`w-full flex py-6 justify-center items-center navbar transition-all duration-300 ease-in-out ${
+      className={`w-full flex justify-center items-center navbar transition-all duration-300 ease-in-out ${
         isSticky
           ? "fixed top-0 bg-white h-12 shadow-md"
           : "h-20 bg-transparent"

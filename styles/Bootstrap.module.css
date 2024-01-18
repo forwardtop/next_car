@@ -1,9 +1,16 @@
 /* Start Bootstrap carousel */
 .itemP {
+  height: 100vh;
   }
   .itemP > img {
     width: 100%;
     object-fit: cover;
+    height:auto;
+  }
+  @media (max-width: 1604px) {
+    .itemP {
+      height: auto; /* Set height to auto for smaller screens */
+    }
   }
   
   .caption {

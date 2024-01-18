@@ -3,12 +3,6 @@ import styles from "styles/style";
 import "styles/globals.css";
 import {
   Navbar,
-  // Hero,
-  // Stats,
-  // Business,
-  // Billing,
-  // CardDeal,
-  // CTA,
   Footer,
   HeroImageSlider,
   BootstrapCarousel,
