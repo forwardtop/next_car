@@ -261,11 +261,10 @@
   text-align:center;
 }
 
-/* style.css */
+style.css
 
 .overlay{
   z-index: 1;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,11 +276,21 @@
           justify-content: center;
 }
 video {
-  position: absolute;
-  width: 90%;
-  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
+
+@media only screen and (max-width: 767px) {
+  video {
+    width: auto; /* Set to 'auto' for responsive width */
+    height: auto; /* Set to 'auto' for responsive height */
+  }
+  .navbar{
+    position: relative!important;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+

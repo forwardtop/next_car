@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { close, logo, menu } from "public/assets";
-import { navLinks } from "../constants";
+import { navLinks } from "constants/";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -53,28 +53,28 @@ const Navbar: React.FC = () => {
           </li>
         ))}
       </ul>
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-end items-center p-2">
         <Image
           src={toggle ? close : menu}
           alt="menu"
           className="object-contain"
-          width={28}
-          height={28}
+          width={24}
+          height={24}
           onClick={() => setToggle((prev) => !prev)}
         />
         <div
           className={`${toggle ? "flex" : "hidden"}
             p-6 bg-black-gradient absolute top-20 ring-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
-          <ul className="list-none flex flex-col justify-end items-center flex-1">
+          <ul className="list-none flex flex-col justify-center items-center ">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                className={`font-poppins font-normal cursor-pointer text-[16px] ${
                   index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 }`}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <a href="/who-we-are" className="text-white text-decoration-none">{nav.title}</a>
               </li>
             ))}
           </ul>

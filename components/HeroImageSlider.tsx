@@ -55,7 +55,7 @@ const HeroImageSlider: React.FC = () => (
     autoPlay={true}
     interval={3000}
     infiniteLoop={true}
-    className='w-[1200px]'
+    className='w-full lg:w-[1200px]'
   >
     {items.map((item, index) => (
       <div key={index}>

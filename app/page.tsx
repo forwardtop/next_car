@@ -36,17 +36,17 @@ const Home: React.FC = () => {
           <div className="flex justify-center">
             <HeroImageSlider />
           </div>
-          <div className="flex justify-center mt-4 animate-fade-up animate-once animate-ease-linear">
+          {/* <div className="flex justify-center mt-4 animate-fade-up animate-once animate-ease-linear">
             <button className="text-xl border-solid border-1 border-gray-900 p-1 w-48 rounded-sm hover:bg-black duration-500 hover:text-white">
               Explore More
             </button>
-          </div>
-          <div className="max-w-[90%] m-auto">
-            <div className="">
+          </div> */}
+          <div className="max-w-full lg:max-w-[90%] m-auto">
+            <div className="mt-12">
               <HeroVideo />
             </div>
-            <div className="">
-              <h2 className="text-center mb-5 text-4xl">
+            <div className="mt-24">
+              <h2 className="text-4xl font-bold mb-4 text-center">
                 Discover the world of QWIKIO
               </h2>
               <ImageGallery />

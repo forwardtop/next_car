@@ -6,7 +6,7 @@ const WhoWeAre: React.FC = () => {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <div className="sticky top-0">
+        <div className="">
           <Navbar />
         </div>
         <div className="flex items-center justify-center">

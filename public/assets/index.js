@@ -1,5 +1,5 @@
 import logo from "./images/logo.png";
-import menu from "./images/menu.svg";
+import menu from "./images/menu.png";
 import close from "./images/close.svg";
 import google from "./images/google.svg";
 import apple from "./images/apple.svg";

@@ -89,6 +89,7 @@ const BootstrapCarousel: React.FC = () => {
         </Carousel.Item>
       ))}
     </Carousel>
+     
   );
 };
 

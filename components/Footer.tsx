@@ -1,14 +1,13 @@
 import styles from "styles/style";
 import { logo } from "public/assets";
-import { footerLinks, socialMedia, contactInfo } from "../constants";
+import { socialMedia, contactInfo } from "constants/";
 import Image from "next/image";
-import { FaEnvelope } from "react-icons/fa";
 
 
 const Footer: React.FC = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexCenter} md:flex-row flex-col mb-8 w-full`}>
-      <div className="flex-1 flex flex-col lg:flex-row justify-between align-middle mr-10">
+      <div className="flex-1 flex flex-col lg:flex-row justify-between align-middle">
         <Image
           src={logo}
           alt="qwikio"
