@@ -27,8 +27,8 @@ jobs:
       - name: Deploy to Webdock
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: 45.153.48.221
+          server: ftp.qwikio.com
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           server-dir: /var/www/html/
-          port: 22
+          port: 21
