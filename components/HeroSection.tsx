@@ -1,7 +1,7 @@
 // components/HeroSection.tsx
 
 import React from 'react';
-import styles from '../styles/HeroSection.module.css'; // Import your styles
+import styles from 'styles/HeroSection.module.css'; // Import your styles
 import Link from 'next/link';
 
 const HeroSection: React.FC = () => {

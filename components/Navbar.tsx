@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
     <nav
       className={`w-full flex py-6 justify-center items-center navbar transition-all duration-300 ease-in-out ${
         isSticky
-          ? "fixed top-0 bg-white !text-gray-500 h-12 shadow-md"
+          ? "fixed top-0 bg-white h-12 shadow-md"
           : "h-20 bg-transparent"
       }`}
     >
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           >
             <Link
               href={`${nav.link}`}
-              className="text-white decoration-transparent"
+              className={`${isSticky ? "text-gray-500" : "text-white"} text-decoration-none`}
             >
               {nav.title}
             </Link>

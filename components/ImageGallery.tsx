@@ -40,7 +40,7 @@ const ImageGallery: React.FC = () => {
         <div className="-m-1 flex flex-wrap md:-m-2">
           <div className="flex flex-col w-full lg:w-2/3">
             {images.slice(0, 2).map((image, index) => (
-              <div key={index} className={`w-${index === 0 ? 'full' : '1/2'} p-1 md:p-2`}>
+              <div key={index} className={`w-${index === 0 ? 'full' : ''} p-1 md:p-2`}>
                 <a href={image.link}>
                   <img
                     alt={image.alt}
